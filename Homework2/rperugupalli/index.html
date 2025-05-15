@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Mental Health Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .chart-container {
+      margin-bottom: 40px;
+    }
+    svg {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Mental Health and Academic Performance Dashboard</h1>
+
+  <div id="dashboard">
+    <div class="chart-container" id="view1">
+      <h2>Mental Health Conditions by Gender</h2>
+      <svg width="600" height="400"></svg>
+    </div>
+
+    <div class="chart-container" id="view2">
+      <h2>Treatment Seeking by Gender (Percentage)</h2>
+      <svg width="600" height="400"></svg>
+    </div>
+
+    <div class="chart-container" id="view3">
+      <h2>Flow of Mental Health and Treatment Patterns</h2>
+      <svg width="800" height="500"></svg>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
