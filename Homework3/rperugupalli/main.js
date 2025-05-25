@@ -1,4 +1,3 @@
-
 d3.csv("survey 605.csv", d3.autoType).then(data => {
     // svg width and height constants
     const svgW = 700, svgH = 450;
@@ -9,9 +8,7 @@ d3.csv("survey 605.csv", d3.autoType).then(data => {
     const chart = d3.select('#chart').append('svg')
       .attr('width', svgW)
       .attr('height', svgH);
-  
 
-  
     const exerciseCats = [
       'Less than once a week',
       '1-2 times a week',
