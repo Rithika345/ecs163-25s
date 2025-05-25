@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- title of the dashboard -->
+  <title>exercise frequency dashboard</title>
+  <!-- include d3 library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    /* basic page styling */
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin:20px; 
+      background:#f4f7fa; 
+      color:#333; 
+    }
+    /* dashboard heading style */
+    h1 { 
+      text-align:center; 
+      color:#2c3e50; 
+    }
+    /* controls container style */
+    .controls { 
+      text-align:center; 
+      margin-bottom:10px; 
+    }
+    /* buttons and dropdown styling */
+    .controls button, .controls select { 
+      margin: 0 10px; 
+      padding:5px 10px; 
+      font-size:14px; 
+    }
+    /* instruction text styling */
+    #instruction { 
+      text-align:center; 
+      margin-bottom:20px; 
+      color:#555; 
+      font-style:italic; 
+    }
+    /* svg container styling */
+    svg { 
+      display:block; 
+      margin:0 auto; 
+      background:#fff; 
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+    }
+    /* axis label styling */
+    .axis-label { 
+      font-size:12px; 
+      fill:#555; 
+    }
+    /* legend text styling */
+    .legend text { 
+      font-size:12px; 
+      fill:#333; 
+    }
+    /* brush selection highlight styling */
+    .brush .selection { 
+      fill: #ddd; 
+      fill-opacity: 0.4; 
+    }
+  </style>
+</head>
+<body>
+  <!-- main dashboard title -->
+  <h1>Exercise Frequency Dashboard</h1>
+  <!-- controls for grouping, view toggle, and clear brush -->
+  <div class="controls">
+    <label for="groupSelect"><strong>group by:</strong></label>
+    <select id="groupSelect">
+      <option value="none">none (overall)</option>
+      <option value="What is your gender?">gender</option>
+      <option value="What is your age?">age</option>
+      <option value="What is your highest level of education?">education</option>
+      <option value="What is your current occupation?">occupation</option>
+      <option value="How frequently do you use your fitness wearable?">device usage frequency</option>
+    </select>
+    <button id="toggleBtn">show pie</button>
+    <button id="clearBtn">clear selection</button>
+  </div>
+  <!-- brushing instruction -->
+  <div id="instruction">drag across the bar chart to highlight bars; click "clear selection" to reset.</div>
+  <!-- chart placeholder -->
+  <div id="chart"></div>
+  <!-- include main.js script -->
+  <script src="main.js"></script>
+</body>
+</html>
